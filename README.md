@@ -21,26 +21,25 @@ Der Datensatz beinhaltet 5 Spalten:
 
 4. Train-Test-Split: Wir teilen unsere Daten in Trainings- und Testsets auf, wobei die Features in X und die Labels in y aufgeteilt werden. Dies ist notwendig, um unser Modell zu trainieren und zu evaluieren.
 
-5. Deep Learning mit Tensorflow: Wir verwenden Tensorflow, um ein Deep Neural Network (DNN) zu erstellen. Dabei verwenden wir den DNNClassifier von Tensorflow Learn. Wir definieren die Struktur des Modells, einschließlich der Anzahl der versteckten Schichten und der Neuronen in jeder Schicht. Das Modell wird auf den Trainingsdaten trainiert.
+5. Modellerstellung: Zu Beginn erstellen wir ein neuronales Netzwerk-Modell mit Keras. Das Modell ist sequenziell und besteht aus verschiedenen Schichten. Zuerst wird die Eingabeschicht definiert, die die korrekte Anzahl von Merkmalen aufweist. Anschließend folgen mehrere dichte Schichten, die jeweils mit einer ReLU-Aktivierungsfunktion ausgestattet sind. Die letzte Schicht hat zwei Ausgänge, was darauf hinweist, dass es sich um ein Klassifikationsproblem mit zwei Klassen handelt und eine Softmax-Aktivierung verwendet.
 
-6. Vorhersage und Auswertung: In der Modellauswertung unseres Tensorflow-Projekts vergleichen wir die Leistung zweier unterschiedlicher Klassifikationsmodelle: eines Deep Neural Networks (DNN) und eines Random Forest Classifiers. Dies dient dazu, die Wirksamkeit von Deep Learning-Modellen im Vergleich zu traditionellen Machine Learning-Methoden zu untersuchen.
-Nachdem wir das DNN auf den Trainingsdaten trainiert haben, verwenden wir es, um Vorhersagen für unser Testset (x_test) zu treffen. Um die Leistung des DNN-Modells zu bewerten, greifen wir auf die Confusion Matrix und den Classification Report zurück. Aufgrund der mächtigen Modellkapazitäten eines DNNs können wir in der Regel eine hohe Genauigkeit und gute Leistungskennzahlen erwarten. Das DNN sollte in der Lage sein, authentifizierte und nicht authentifizierte Banknoten gut zu unterscheiden.
-Im Gegensatz dazu verwenden wir den Random Forest Classifier als Referenzmodell. Wir trainieren diesen auf den Trainingsdaten und wenden ihn auf das Testset an. Auch hier evaluieren wir die Leistung mithilfe der Confusion Matrix und des Classification Reports. Obwohl Random Forests typischerweise gute Ergebnisse liefern, erwarten wir aufgrund ihrer begrenzten Modellkapazität, insbesondere im Vergleich zu DNNs, leicht niedrigere Genauigkeitswerte.
+6. Kompilierung des Modells: Nach der Modellerstellung kompilieren wir usner Modell. Hierbei legen wir wichtige Einstellungen fest, darunter der Optimierungsalgorithmus (in diesem Fall 'adam'), die Verlustfunktion ('sparse_categorical_crossentropy') und die Metrik zur Überwachung der Genauigkeit des Modells ('accuracy'). Dieser Schritt legt die Grundlage für das Training.
+
+7. Training des Modells: Unser Modell wird mit den Trainingsdaten für eine bestimmte Anzahl von Epochen (in diesem Fall 10) trainiert. Das Training erfolgt in Batches, wobei jeder Batch 32 Datenpunkte enthält. Während des Trainings werden die Verlustfunktion und die Genauigkeit für jede Epoche überwacht. Das Modell passt seine Gewichtungen an, um die Verlustfunktion zu minimieren und die Genauigkeit zu maximieren.
+
 
 ### Ergebnis
 
-Für das Deep Neural Network (DNN) kann man extrem genaue Vorhersagen erwarten, wie durch die Confusion Matrix und den Classification Report bestätigt:
+Das Ergebnis des Trainings und der Evaluierung des neuronalen Netzwerk-Modells mit den angegebenen Werten ist wie folgt:
 
-- Genauigkeit (Accuracy): 100%
-- Präzision (Precision): 100%
-- Recall: 100%
-- F1-Score: 100%
+- Trainings-Ergebnisse:
 
-Für den Random Forest Classifier kann man ebenfalls gute Ergebnisse erwarten, wenn auch nicht ganz so präzise wie beim DNN:
+Nach 10 Trainingsepochen beträgt der Verlust (Loss) etwa 0.0390.
+Die Genauigkeit (Accuracy) auf den Trainingsdaten beträgt etwa 99.27%.
 
-- Genauigkeit (Accuracy): 97.8%
-- Präzision (Precision): 97.3%
-- Recall: 97.2%
-- F1-Score: 97.2%
+- Test-Ergebnisse:
 
+Bei der Evaluierung auf den Testdaten beträgt der Verlust (Loss) etwa 0.0361.
+Die Genauigkeit (Accuracy) auf den Testdaten beträgt etwa 99.03%.
 
+Diese Ergebnisse deuten darauf hin, dass das Modell sehr gut auf den Trainingsdaten gelernt hat und auch auf den Testdaten gute Leistungen erzielt, wobei die Genauigkeit bei etwa 99% liegt. Dies zeigt, dass das Modell in der Lage ist, die gegebenen Daten gut zu klassifizieren.
