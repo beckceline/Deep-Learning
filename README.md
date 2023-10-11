@@ -24,9 +24,7 @@ Der Datensatz beinhaltet 5 Spalten:
 5. Deep Learning mit Tensorflow: Wir verwenden Tensorflow, um ein Deep Neural Network (DNN) zu erstellen. Dabei verwenden wir den DNNClassifier von Tensorflow Learn. Wir definieren die Struktur des Modells, einschließlich der Anzahl der versteckten Schichten und der Neuronen in jeder Schicht. Das Modell wird auf den Trainingsdaten trainiert.
 
 6. Vorhersage und Auswertung: In der Modellauswertung unseres Tensorflow-Projekts vergleichen wir die Leistung zweier unterschiedlicher Klassifikationsmodelle: eines Deep Neural Networks (DNN) und eines Random Forest Classifiers. Dies dient dazu, die Wirksamkeit von Deep Learning-Modellen im Vergleich zu traditionellen Machine Learning-Methoden zu untersuchen.
-
 Nachdem wir das DNN auf den Trainingsdaten trainiert haben, verwenden wir es, um Vorhersagen für unser Testset (x_test) zu treffen. Um die Leistung des DNN-Modells zu bewerten, greifen wir auf die Confusion Matrix und den Classification Report zurück. Aufgrund der mächtigen Modellkapazitäten eines DNNs können wir in der Regel eine hohe Genauigkeit und gute Leistungskennzahlen erwarten. Das DNN sollte in der Lage sein, authentifizierte und nicht authentifizierte Banknoten gut zu unterscheiden.
-
 Im Gegensatz dazu verwenden wir den Random Forest Classifier als Referenzmodell. Wir trainieren diesen auf den Trainingsdaten und wenden ihn auf das Testset an. Auch hier evaluieren wir die Leistung mithilfe der Confusion Matrix und des Classification Reports. Obwohl Random Forests typischerweise gute Ergebnisse liefern, erwarten wir aufgrund ihrer begrenzten Modellkapazität, insbesondere im Vergleich zu DNNs, leicht niedrigere Genauigkeitswerte.
 
 ### Ergebnis
