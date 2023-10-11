@@ -33,13 +33,16 @@ Im Gegensatz dazu verwenden wir den Random Forest Classifier als Referenzmodell.
 
 Für das Deep Neural Network (DNN) kann man extrem genaue Vorhersagen erwarten, wie durch die Confusion Matrix und den Classification Report bestätigt:
 
-| # Genauigkeit (Accuracy) | Präzision (Precision) | Recall | F1-Score |
-| --- | --- |
-| 100% | 100% | 100% | 100% |
+- Genauigkeit (Accuracy): 100%
+- Präzision (Precision): 100%
+- Recall: 100%
+- F1-Score: 100%
 
 Für den Random Forest Classifier kann man ebenfalls gute Ergebnisse erwarten, wenn auch nicht ganz so präzise wie beim DNN:
 
-| Genauigkeit (Accuracy) | Präzision (Precision) | Recall | F1-Score |
-|----------|----------|
-| 97.8% | 97.3% | 97.2% | 97.2% |
+- Genauigkeit (Accuracy): 97.8%
+- Präzision (Precision): 97.3%
+- Recall: 97.2%
+- F1-Score: 97.2%
+
 
