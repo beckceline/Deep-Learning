@@ -30,16 +30,22 @@ Der Datensatz beinhaltet 5 Spalten:
 
 ### Ergebnis
 
-Das Ergebnis des Trainings und der Evaluierung des neuronalen Netzwerk-Modells mit den angegebenen Werten ist wie folgt:
+Das Modell wurde mit den Trainingsdaten trainiert, wobei insgesamt 10 Trainingsepochen durchgeführt wurden. Die Entwicklung von Loss und Accuracy über diese Epochen hinweg zeigt, wie effektiv das Modell trainiert wurde:
 
-- Trainings-Ergebnisse:
+- Epoch 1/10: Loss: 0,6286, Accuracy: 78,02%
+- Epoch 2/10: Loss: 0,5327, Accuracy: 90,21%
+- Epoch 3/10: Loss: 0,4338, Accuracy: 91,56%
+- Epoch 4/10: Loss: 0,3170, Accuracy: 94,90%
+- Epoch 5/10: Loss: 0,2095, Accuracy: 96,35%
+- Epoch 6/10: Loss: 0,1353, Accuracy: 97,40%
+- Epoch 7/10: Loss: 0,0906, Accuracy: 98,12%
+- Epoch 8/10: Loss: 0,0658, Accuracy: 98,33%
+- Epoch 9/10: Loss: 0,0502, Accuracy: 98,33%
+- Epoch 10/10: Loss: 0,0403, Accuracy: 99,17%
 
-Nach 10 Trainingsepochen beträgt der Verlust (Loss) etwa 0.0390.
-Die Genauigkeit (Accuracy) auf den Trainingsdaten beträgt etwa 99.27%.
+Nach dem Training wurde das Modell auf den Testdaten evaluiert, um seine Leistung auf nicht gesehenen Daten zu bewerten. Die Ergebnisse dieser Evaluation sind wie folgt:
 
-- Test-Ergebnisse:
+- Loss auf Testdaten: 0,0320
+- Genauigkeit auf Testdaten: 99,27%
 
-Bei der Evaluierung auf den Testdaten beträgt der Verlust (Loss) etwa 0.0361.
-Die Genauigkeit (Accuracy) auf den Testdaten beträgt etwa 99.03%.
-
-Diese Ergebnisse deuten darauf hin, dass das Modell sehr gut auf den Trainingsdaten gelernt hat und auch auf den Testdaten gute Leistungen erzielt, wobei die Genauigkeit bei etwa 99% liegt. Dies zeigt, dass das Modell in der Lage ist, die gegebenen Daten gut zu klassifizieren.
+Die Trainings- und Testergebnisse deuten darauf hin, dass das Modell sehr effektiv trainiert wurde. Der Loss auf den Testdaten liegt bei 0,0320, und die Genauigkeit beträgt beeindruckende 99,27%. Dies zeigt, dass das Modell die Trainingsdaten gut gelernt hat und auch auf unbekannte Testdaten sehr gut abschneidet.
